@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero-section"
 import ServiceCard from "@/components/service-card"
 import FeatureList from "@/components/feature-list"
 import Script from "next/script"
+import PayPalButtons from "@/components/paypal-buttons"
 
 export default function Services() {
   const serviceFeatures = [
@@ -58,6 +59,7 @@ export default function Services() {
               price="£105/month"
               paypalButtonId="P-6E915052EG030082GM5G56LA"
             />
+            <PayPalButtons planId="P-6E915052EG030082GM5G56LA" />
 
             <ServiceCard
               title="Two Hours of Support"
@@ -72,6 +74,7 @@ export default function Services() {
               price="£200/month"
               paypalButtonId="P-5VK48173KT205742BM6RYWFA"
             />
+            <PayPalButtons planId="P-5VK48173KT205742BM6RYWFA" />
 
             <ServiceCard
               title="Three Hours of Support"
@@ -86,6 +89,7 @@ export default function Services() {
               price="£285/month"
               paypalButtonId="P-1KK140556F573134KM5G5WCQ"
             />
+            <PayPalButtons planId="P-1KK140556F573134KM5G5WCQ" />
 
             <ServiceCard
               title="Bespoke Project"
@@ -107,66 +111,6 @@ export default function Services() {
         id="paypal-script"
         strategy="afterInteractive"
         src="https://www.paypal.com/sdk/js?client-id=AX_8QiXsmnhX9jBZoE-iwUiJo3ZG78HFTvfV7GVOhsVvMTleSF6-lbLgrsBQ9qbXqrsHizT1GghTC36f&vault=true&intent=subscription"
-        onLoad={() => {
-          if (typeof window !== "undefined" && window.paypal) {
-            // First button
-            window.paypal
-              .Buttons({
-                style: {
-                  shape: "rect",
-                  color: "black",
-                  layout: "vertical",
-                  label: "paypal",
-                },
-                createSubscription: (data, actions) =>
-                  actions.subscription.create({
-                    plan_id: "P-6E915052EG030082GM5G56LA",
-                  }),
-                onApprove: (data, actions) => {
-                  alert("Thank you for your subscription! Your Subscription ID is: " + data.subscriptionID)
-                },
-              })
-              .render("#paypal-button-container-P-6E915052EG030082GM5G56LA")
-
-            // Second button
-            window.paypal
-              .Buttons({
-                style: {
-                  shape: "rect",
-                  color: "black",
-                  layout: "vertical",
-                  label: "paypal",
-                },
-                createSubscription: (data, actions) =>
-                  actions.subscription.create({
-                    plan_id: "P-5VK48173KT205742BM6RYWFA",
-                  }),
-                onApprove: (data, actions) => {
-                  alert("Thank you for your subscription! Your Subscription ID is: " + data.subscriptionID)
-                },
-              })
-              .render("#paypal-button-container-P-5VK48173KT205742BM6RYWFA")
-
-            // Third button
-            window.paypal
-              .Buttons({
-                style: {
-                  shape: "rect",
-                  color: "black",
-                  layout: "vertical",
-                  label: "paypal",
-                },
-                createSubscription: (data, actions) =>
-                  actions.subscription.create({
-                    plan_id: "P-1KK140556F573134KM5G5WCQ",
-                  }),
-                onApprove: (data, actions) => {
-                  alert("Thank you for your subscription! Your Subscription ID is: " + data.subscriptionID)
-                },
-              })
-              .render("#paypal-button-container-P-1KK140556F573134KM5G5WCQ")
-          }
-        }}
       />
     </>
   )
