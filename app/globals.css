@@ -13,7 +13,7 @@
 
 @layer base {
   body {
-    @apply text-neutral-800 antialiased;
+    @apply text-gray-800 antialiased;
   }
 
   h1,
