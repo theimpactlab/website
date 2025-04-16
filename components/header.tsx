@@ -19,33 +19,35 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-bold text-primary-600 flex items-center">
-            <span className="font-poppins">theimpactlab</span>
-          </Link>
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-xl font-bold text-primary-600 flex items-center">
+              <span className="font-poppins">theimpactlab</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            type="button"
-            className="md:hidden text-gray-700 hover:text-primary-600"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
-          </button>
+          <div className="md:hidden flex items-center">
+            <button type="button" className="text-gray-700 hover:text-primary-600" onClick={() => setIsOpen(!isOpen)}>
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
+            </button>
+          </div>
         </div>
       </div>
 
