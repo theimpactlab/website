@@ -14,18 +14,14 @@ export default function ContactForm() {
 
       <FeatureList items={contactFeatures} className="max-w-md mx-auto" />
 
-      <form
-        target="_blank"
-        action="https://formsubmit.co/ryan@theimpactlab.co.uk"
-        method="POST"
-        className="space-y-6 max-w-md mx-auto"
-      >
+      <form action="https://formsubmit.co/ryan@theimpactlab.co.uk" method="POST" className="space-y-6 max-w-md mx-auto">
         {/* FormSubmit.co configuration */}
         <input type="hidden" name="_subject" value="New contact form submission from The Impact Lab website" />
         <input type="hidden" name="_captcha" value="true" />
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="_honey" style={{ display: "none" }} />
-        <input type="hidden" name="_next" value="https://theimpactlab.vercel.app/contact?submitted=true" />
+        {/* Let FormSubmit handle the success page */}
+        <input type="hidden" name="_next" value="https://formsubmit.co/thank-you" />
 
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
