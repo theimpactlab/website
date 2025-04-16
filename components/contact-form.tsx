@@ -20,8 +20,12 @@ export default function ContactForm() {
         <input type="hidden" name="_captcha" value="true" />
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="_honey" style={{ display: "none" }} />
-        {/* Let FormSubmit handle the success page */}
-        <input type="hidden" name="_next" value="https://formsubmit.co/thank-you" />
+        {/* Use FormSubmit's auto-response feature instead of a redirect */}
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Thank you for your message! We've received your submission and will get back to you shortly."
+        />
 
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
