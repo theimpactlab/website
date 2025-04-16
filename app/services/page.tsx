@@ -1,8 +1,7 @@
 import HeroSection from "@/components/hero-section"
 import ServiceCard from "@/components/service-card"
 import FeatureList from "@/components/feature-list"
-import Script from "next/script"
-import PayPalButtons from "@/components/paypal-buttons"
+import PayPalScriptInit from "@/components/paypal-script-init"
 
 export default function Services() {
   const serviceFeatures = [
@@ -59,7 +58,6 @@ export default function Services() {
               price="£105/month"
               paypalButtonId="P-6E915052EG030082GM5G56LA"
             />
-            <PayPalButtons planId="P-6E915052EG030082GM5G56LA" />
 
             <ServiceCard
               title="Two Hours of Support"
@@ -74,7 +72,6 @@ export default function Services() {
               price="£200/month"
               paypalButtonId="P-5VK48173KT205742BM6RYWFA"
             />
-            <PayPalButtons planId="P-5VK48173KT205742BM6RYWFA" />
 
             <ServiceCard
               title="Three Hours of Support"
@@ -89,7 +86,6 @@ export default function Services() {
               price="£285/month"
               paypalButtonId="P-1KK140556F573134KM5G5WCQ"
             />
-            <PayPalButtons planId="P-1KK140556F573134KM5G5WCQ" />
 
             <ServiceCard
               title="Bespoke Project"
@@ -107,11 +103,7 @@ export default function Services() {
         </div>
       </section>
 
-      <Script
-        id="paypal-script"
-        strategy="afterInteractive"
-        src="https://www.paypal.com/sdk/js?client-id=AX_8QiXsmnhX9jBZoE-iwUiJo3ZG78HFTvfV7GVOhsVvMTleSF6-lbLgrsBQ9qbXqrsHizT1GghTC36f&vault=true&intent=subscription"
-      />
+      <PayPalScriptInit />
     </>
   )
 }
