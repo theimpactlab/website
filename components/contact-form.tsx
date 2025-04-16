@@ -46,7 +46,7 @@ export default function ContactForm() {
         </div>
       ) : (
         <form
-          action="https://formsubmit.co/19e23abd7388988e6994d022c63f572a"
+          action="https://formsubmit.co/ryan@theimpactlab.co.uk"
           method="POST"
           className="space-y-6 max-w-md mx-auto"
           onSubmit={handleSubmit}
