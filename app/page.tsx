@@ -24,15 +24,12 @@ export default function Home() {
 
   return (
     <>
-      <HeroSection
-        title="the impact lab 🚀"
-        subtitle="Building Impactful Solutions"
-        description="Welcome to The Impact Lab, where we specialise in delivering innovative solutions for measuring and amplifying charity impact."
-        primaryButtonText="Contact Us"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Our Services"
-        secondaryButtonLink="/services"
-      />
+    <HeroSection
+      title="the impact lab"
+      subtitle="Building Impactful Solutions"
+      description="Welcome to The Impact Lab, where we specialise in delivering innovative solutions for measuring and amplifying charity impact."
+    />
+
 
       <section className="container-custom">
         <div className="max-w-3xl mx-auto">
