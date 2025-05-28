@@ -46,45 +46,45 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
-              title="One Hour of Support"
+              title="Two Hours of Support"
               emoji="⏱️"
-              description="Need some one-off advice? Purchase an hour of our expert consultation time."
+              description="Need some one-off advice? Purchase a couple of hours of consultation time."
               features={[
                 "Focused problem-solving session",
                 "Expert guidance on specific issues",
                 "Analysis of your unique challenges",
               ]}
               featureEmojis={["🎯", "💼", "🔍"]}
-              price="£105/month"
+              price="£210/month"
               paypalButtonId="P-6E915052EG030082GM5G56LA"
             />
 
             <ServiceCard
-              title="Two Hours of Support"
+              title="Four Hours of Support"
               emoji="⏱️"
-              description="Need some one-off advice? Purchase an hour of our expert consultation time."
+              description="Need some one-off advice? Purchase four hours of consultation time."
               features={[
                 "Small pieces of scoping work",
                 "Strategic advice",
                 "Problem solving for specific research or data issues",
               ]}
               featureEmojis={["📘", "🧩", "🔬"]}
-              price="£200/month"
-              paypalButtonId="P-5VK48173KT205742BM6RYWFA"
+              price="£400/month"
+              paypalButtonId="P-1KK140556F573134KM5G5WCQ"
             />
 
             <ServiceCard
-              title="Three Hours of Support"
+              title="Six Hours of Support"
               emoji="🔄"
-              description="Looking for ongoing support? Subscribe to our monthly retainer (cancelable at any time) for three hours of dedicated assistance each month."
+              description="Looking for ongoing support? Subscribe to our monthly retainer (cancelable at any time) for six hours of dedicated assistance each month."
               features={[
                 "Regular check-ins and progress tracking",
                 "Continuous improvement of your impact measurement",
                 "Long-term strategic planning and support",
               ]}
               featureEmojis={["📅", "🔧", "📈"]}
-              price="£285/month"
-              paypalButtonId="P-1KK140556F573134KM5G5WCQ"
+              price="£570/month"
+              paypalButtonId="P-5VK48173KT205742BM6RYWFA"
             />
 
             <ServiceCard
