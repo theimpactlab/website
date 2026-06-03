@@ -1,8 +1,5 @@
 import HeroSection from "@/components/hero-section"
-import dynamic from "next/dynamic"
-
-// Import the client component with no SSR
-const CalendarInit = dynamic(() => import("@/components/calendar-init"), { ssr: false })
+import CalendarInit from "@/components/calendar-init"
 
 export default function Book() {
   return (
